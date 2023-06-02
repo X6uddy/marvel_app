@@ -10,6 +10,7 @@
     }
     &__item {
         transition: 0.3s transform;
+        position: relative;
         &-img {
             box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
             width: 225px;
@@ -31,6 +32,24 @@
         }
         &:hover {
             transform: translateY(-5px);
+        }
+        .addWishList {
+            transition: 0.8s all;
+            img {
+                margin-top: 5px;
+                width: 35px;
+                height: 35px;
+                &::after {
+                    background-color: #fff;
+                }
+            }
+            &:hover {
+                scale: 1.25;
+            }
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            z-index: 10;
         }
     }
 }

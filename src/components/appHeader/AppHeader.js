@@ -23,6 +23,7 @@ const AppHeader = () => {
                         to="/comics"
                         
                         >Comics </NavLink></li>
+                    
                 </ul>
             </nav>
         </header>

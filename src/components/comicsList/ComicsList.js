@@ -1,5 +1,8 @@
-import {useState, useEffect} from 'react';
+import {useState, useEffect, startTransition} from 'react';
 import { Link } from 'react-router-dom';
+import blackStar from '../../resources/img/black.png';
+import goldStar from '../../resources/img/gold.png'
+
 
 import useMarvelService from '../../services/MarvelService';
 import Spinner from '../spinner/Spinner';
@@ -13,6 +16,7 @@ const ComicsList = () => {
     const [newItemLoading, setnewItemLoading] = useState(false);
     const [offset, setOffset] = useState(0);
     const [comicsEnded, setComicsEnded] = useState(false);
+    const [toggleStar, setToggleStar] = useState(false);
 
     const {loading, error, getAllComics} = useMarvelService();
 

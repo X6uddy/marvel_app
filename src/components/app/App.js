@@ -11,6 +11,7 @@ const SingleComicLayout = lazy(() => import('../pages/singleComicLayout/SingleCo
 const SingleCharacterLayout = lazy(() => import('../pages/singleCharacterLayout/SingleCharacterLayout'));
 const SinglePage = lazy(() => import('../pages/SinglePage'));
 
+
 const App = () => {
     return (
         <Router>
@@ -29,7 +30,7 @@ const App = () => {
                             <Route path="/characters/:id" element={<SinglePage Component={SingleCharacterLayout} dataType='character'/>} />
                             
                             <Route path="*" element={<Page404/>} />
-                                
+                            
                              
                         </Routes>
                     </Suspense>
